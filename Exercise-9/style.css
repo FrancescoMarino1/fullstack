@@ -1,0 +1,140 @@
+:root {
+   
+    --card-padding: 20px;
+    --card-radius: 25px;
+
+    --card-photo-width: 350px;
+    --card-photo-height: 300px;
+    --card-photo-max-width: 100%;
+    --card-photo-max-height: 100%;
+}
+
+.card h3,
+.card p{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.card {
+    border-radius: var(--card-radius);
+    font-family: sans-serif;
+    background-color: rgb(243, 243, 243);
+}
+
+.card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: rgb(167, 167, 167);
+    border-top-right-radius: var(--card-radius);
+    border-top-left-radius: var(--card-radius);
+}
+
+.card .card-header .card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.card .card-header .card-img .profile-img {
+    height: 52px;
+    width: 52px;
+    border-radius: 50px;
+    background-color: white;
+    background-size: contain;
+    background-position: center center;
+}
+
+.card .card-header .card-titles {
+    padding: 0;
+}
+
+.card .card-header .card-titles h3 {
+    color: black;
+}
+
+.card .card-header .card-titles p {
+    color: white;
+}
+
+.card .card-setting {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+}
+
+.card .card-photo img {
+    margin: 0;
+    padding: 0;
+    width: var(--card-photo-width);
+    height: var(--card-photo-height);
+    max-width: var(--card-photo-max-width);
+    max-height: var(--card-photo-max-height);
+}
+.card .card-iterator {
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+}
+
+.card .card-body {
+    width: var(--card-photo-width);
+
+}
+
+.card .card-body p {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    text-align: justify;
+}
+
+.card .card-body .card-user {
+    font-weight: bold;
+}
+
+.card-setting span {
+    font-size: 35px;
+}
+
+.card-iterator span {
+    font-size: 30px;
+}
+@media (max-width: 768px) {
+    main {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}

@@ -10,3 +10,4 @@ const person2 = person1;
 
 console.log(person1);
 console.log(person2);
+ytdyirdx
